@@ -13,7 +13,7 @@ const App = ()=> {
 
   // State 
   const [events, setEvents] = useState([])
-  const [eventData, setEventData] = useState([])
+  const [eventData, setEventData] = useState({})
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
   //UseEffect
@@ -31,16 +31,13 @@ const App = ()=> {
 
   //Events handlers
   const eventClickHandler = event => {
-    let arr = [{...event}]
-    setEventData([...arr])
+    setEventData({...event})
     setIsDialogOpen(true)
   }
-  // let d2 = moment([2017, 11, 23]);
-  // console.log(d2.toDate());
-  // console.log(moment().toDate())
   return (
     <div className="App">
       <Calendar
+        popup
         localizer={localizer}
         defaultDate={new Date()}
         defaultView="month"
@@ -50,11 +47,6 @@ const App = ()=> {
         components={{toolbar: CustomToolbar}}
         titleAccessor={(event)=>`${event.title} (${event.assignedTo})`}
         onSelectEvent = {event=>eventClickHandler(event)}
-        onShowMore = {
-          events=>{
-            setEventData([...events])
-            setIsDialogOpen(true)
-        }}
         messages={{
           showMore: total => (
             <div className="showmore__link">{`+${total} more`}</div>

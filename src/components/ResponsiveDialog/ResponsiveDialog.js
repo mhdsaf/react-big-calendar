@@ -38,18 +38,12 @@ export default function ResponsiveDialog(props) {
       >
         <DialogTitle id="responsive-dialog-title">{props.eventData.length>1?`Tasks details (${props.eventData.length})`:"Task details"}</DialogTitle>
         <DialogContent>
-          {props.eventData.map(element => {
-            return (
-              <>
-                <p><strong>Title: </strong>{element.title}</p>
-                <p><strong>Status: </strong>{element.status}</p>
-                <p><strong>Assigned to: </strong>{element.assignedTo}</p>
-                <p><strong>Start date: </strong>{moment(element.start).format('DD/MM/YYYY')}</p>
-                <p><strong>End date: </strong>{moment(element.end).format('DD/MM/YYYY')}</p>
+                <p><strong>Title: </strong>{props.eventData.title}</p>
+                <p><strong>Status: </strong>{props.eventData.status}</p>
+                <p><strong>Assigned to: </strong>{props.eventData.assignedTo}</p>
+                <p><strong>Start date: </strong>{moment(props.eventData.start).format('DD/MM/YYYY')}</p>
+                <p><strong>End date: </strong>{moment(props.eventData.end).format('DD/MM/YYYY')}</p>
                 <p className="w-100 border-bottom"></p>
-              </>
-            )
-          })}
         </DialogContent>
         <DialogActions>
           <Button text="Close" handler={handleClose}/>
