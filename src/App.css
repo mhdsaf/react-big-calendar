@@ -1,28 +1,15 @@
-.App {
-  text-align: center;
+.showmore__link{
+    color: #212529;
+    text-align: center;
+    padding-top: 5px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.rbc-time-view .rbc-label {
+    display: none;
+    }
+    .rbc-time-view .rbc-allday-cell {
+    height: calc(100vh - 98px);
+    max-height: unset;
+    }
+    .rbc-time-view .rbc-time-content {
+    display: none;
+    }
