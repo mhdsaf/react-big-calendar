@@ -7,11 +7,14 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "axios": "^0.21.1",
+    "lodash": "^4.17.21",
     "moment": "2.24.0",
     "react": "16.13.1",
+    "react-beautiful-dnd": "^13.1.0",
     "react-big-calendar": "0.24.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
