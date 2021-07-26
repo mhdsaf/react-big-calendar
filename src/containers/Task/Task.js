@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './Task.css'
+import classes from './Task.module.css'
 import {v4} from 'uuid'
 import _ from 'lodash'
 import { DragDropContext} from 'react-beautiful-dnd'
@@ -65,13 +65,13 @@ export default function Task() {
         })
     }
     return (
-        <div className="Task container mt-5">
+        <div className={`${classes.task} container mt-5`}>
             <DragDropContext onDragEnd={handleDragEnd}>
                 {
                     _.map(state, (data, key) => {
                         return (
-                            <div className="column" key={key}>
-                                <h3 className="droppable-title">{data.title}</h3>
+                            <div className={classes.column} key={key}>
+                                <h3 className={classes.droppable_title}>{data.title}</h3>
                                 <DropContainer data={data} _key={key}/>
                             </div>
                         )

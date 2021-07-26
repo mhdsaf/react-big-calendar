@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './DragItem.module.css'
 import { Draggable } from 'react-beautiful-dnd'
 
 export default function DragItem(props) {
@@ -7,7 +8,7 @@ export default function DragItem(props) {
                 {(provided, snapshot)=>{
                     return(
                         <div
-                            className={`item ${snapshot.isDragging && "dragging"}`}
+                            className={`${classes.item} ${snapshot.isDragging && classes.dragging}`}
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}

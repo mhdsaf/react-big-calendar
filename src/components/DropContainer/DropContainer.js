@@ -1,6 +1,8 @@
 import React from 'react'
+import classes from './DropContainer.module.css'
 import { Droppable } from 'react-beautiful-dnd'
 import DragItem from '../DragItem/DragItem'
+
 export default function DropContainer(props) {
     return (
         <Droppable droppableId={props._key}>
@@ -9,7 +11,7 @@ export default function DropContainer(props) {
                     <div 
                         ref={provided.innerRef}
                         {...provided.droppableProps}
-                        className={`droppable-col ${snapshot.isDraggingOver && "dropping"}`}
+                        className={`${classes.droppable_col} ${snapshot.isDraggingOver && classes.dropping}`}
                     >
                         {
                             props.data.items.map((element, index) => {

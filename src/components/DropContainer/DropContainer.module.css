@@ -1,0 +1,11 @@
+.droppable_col{
+    min-height: 100px;
+    width: 100%;
+    padding: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.dropping{
+    border: 1px solid #c2c2c2;
+    border-style: dashed;
+}
