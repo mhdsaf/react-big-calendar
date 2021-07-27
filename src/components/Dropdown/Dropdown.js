@@ -13,7 +13,7 @@ const Dropdown = (props) => {
                         return(
                             <a className={`dropdown-item ${classes.item}`}
                                 val={element}
-                                onClick={e=>{props.toggleView(e.target.getAttribute("val"))}}
+                                onClick={e=>{props.handler(e.target.getAttribute("val"))}}
                                 >{element}
                             </a>
                         )

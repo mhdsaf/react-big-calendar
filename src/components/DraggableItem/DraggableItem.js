@@ -1,10 +1,10 @@
 import React from 'react'
-import classes from './DragItem.module.css'
+import classes from './DraggableItem.module.css'
 import { Draggable } from 'react-beautiful-dnd'
 
-export default function DragItem(props) {
+export default function DraggableItem(props) {
     return (
-            <Draggable key={props.element.id} index={props.index} draggableId={props.element.id}>
+            <Draggable key={props.element.id} index={props.index} draggableId={props.element.id.toString()}>
                 {(provided, snapshot)=>{
                     return(
                         <div
@@ -13,7 +13,8 @@ export default function DragItem(props) {
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                         >
-                            {props.element.name}
+                            <div>{props.element.title}</div>
+                            <div className="text-info">{props.element.assignedTo}</div>
                         </div>
                     )
                 }}

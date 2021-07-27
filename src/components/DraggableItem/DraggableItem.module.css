@@ -1,0 +1,25 @@
+.item{
+    transition: 0.2s;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: rgb(30, 30, 30);
+    padding: 5px 10px;
+    box-shadow: 0px 0px 7px 2px rgba(167, 167, 167, 0.50);
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(167, 167, 167, 0.50);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(167, 167, 167, 0.50);
+}
+
+.item:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+}
+
+.dragging {
+    /* background-color: #e1e1e1; */
+    box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(104,102,102,0.70);
+}

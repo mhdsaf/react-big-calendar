@@ -65,7 +65,7 @@ export default function CustomToolbar(toolbar) {
                     <Button text="Today" handler={goToCurrent}/>
                     <Button text="Back" handler={goToBack}/>
                     <Button text="Next" handler={goToNext}/>
-                    <Dropdown labels={["Month", "Week"]} toggleView={toggleView}/>
+                    <Dropdown labels={["Month", "Week"]} handler={toggleView}/>
                 </div>
                 <div>
                     <span>{label()}</span>
