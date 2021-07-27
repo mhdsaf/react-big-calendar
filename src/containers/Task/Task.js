@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react'
 import classes from './Task.module.css'
 import axios from 'axios'
 import _ from 'lodash'
+import Select from 'react-select'
 import { DragDropContext} from 'react-beautiful-dnd'
 import DroppableContainer from '../../components/DroppableContainer/DroppableContainer'
-import Select from 'react-select'
 import Checkbox from '../../components/Checkbox/Checkbox'
 
 export default function Task() {
@@ -27,6 +27,7 @@ export default function Task() {
     const [statusFilter, setStatusFilter] = useState(["Not started", "In progress", "Completed"])
     const [nameFilter, setNameFilter] = useState([])
     const [nameFilterOptions, setNameFilterOptions] = useState([])
+
     // UseEffect
     useEffect(() => {
         axios.get("http://localhost:5000/tasks").then(response=>{
