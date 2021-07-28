@@ -9,9 +9,10 @@ const Dropdown = (props) => {
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 {
-                    props.labels.map(element => {
+                    props.labels.map((element, index) => {
                         return(
-                            <a className={`dropdown-item ${classes.item}`}
+                            <a  key={index}
+                                className={`dropdown-item ${classes.item}`}
                                 val={element}
                                 onClick={e=>{props.handler(e.target.getAttribute("val"))}}
                                 >{element}

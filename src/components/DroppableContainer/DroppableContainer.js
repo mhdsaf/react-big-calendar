@@ -15,14 +15,9 @@ export default function DroppableContainer(props) {
                     >
                         {
                             props.data.items.map((element, index) => {
-                                    if(props.nameFilter.length===0) // no filters
-                                        return(
-                                            <DraggableItem element={element} index={index}/>
-                                        )
-                                    else if(props.nameFilter.includes(element.assignedTo))
-                                        return(
-                                            <DraggableItem element={element} index={index}/>
-                                        )
+                                return(
+                                    <DraggableItem element={element} index={index}/>
+                                )
                             })
                         }
                         {provided.placeholder}

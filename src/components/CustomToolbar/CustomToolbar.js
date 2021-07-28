@@ -10,12 +10,11 @@ export default function CustomToolbar(toolbar) {
     const [view, setView] = useState("month") // default view is monthly
 
     useEffect(() => {
-        console.log('here')
         if(view==="week")
             toolbar.onView("week")
-        else if(view=="month")
+        else if(view==="month")
             toolbar.onView("month")
-    }, [view])
+    }, [view, toolbar])
 
     const goToBack = () => {
         let newDate = ""
@@ -60,7 +59,7 @@ export default function CustomToolbar(toolbar) {
     };
     return (
         <div className={classes.toolbar__container}>
-            <div class={classes.flex__container}>
+            <div className={classes.flex__container}>
                 <div>
                     <Button text="Today" handler={goToCurrent}/>
                     <Button text="Back" handler={goToBack}/>
@@ -71,10 +70,10 @@ export default function CustomToolbar(toolbar) {
                     <span>{label()}</span>
                 </div>
                 <div>
-                    <LabelIcon color="rgb(52, 211, 52)"> Completed</LabelIcon>
+                    <LabelIcon color="#4DD778"> Completed</LabelIcon>
                     <LabelIcon color="rgb(69, 175, 211)"> In progress</LabelIcon>
-                    <LabelIcon color="rgb(240, 173, 110)"> Not started</LabelIcon>
-                    <LabelIcon color="rgb(221, 75, 75)"> Overdue</LabelIcon>
+                    <LabelIcon color="#FC7150"> Not started</LabelIcon>
+                    <LabelIcon color="#FF5B5B"> Overdue</LabelIcon>
                 </div>
             </div>
         </div>
